@@ -1,0 +1,32 @@
+{
+  "name": "my_portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "init:config": "tailwindcss init -p",
+    "watch:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css --watch",
+    "build:css": "tailwindcss -i ./css/tailwind.css -o ./css/styles.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "baseline-browser-mapping": "^2.8.21",
+    "browserslist": "^4.27.0",
+    "caniuse-lite": "^1.0.30001752",
+    "electron-to-chromium": "^1.5.244",
+    "escalade": "^3.2.0",
+    "fraction.js": "^4.3.7",
+    "nanoid": "^3.3.11",
+    "node-releases": "^2.0.27",
+    "normalize-range": "^0.1.2",
+    "picocolors": "^1.1.1",
+    "postcss-value-parser": "^4.2.0",
+    "source-map-js": "^1.2.1",
+    "tailwindcss": "^3.4.18",
+    "update-browserslist-db": "^1.1.4"
+  }
+}
