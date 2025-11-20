@@ -186,25 +186,23 @@
             image.style.opacity = "1";
         });
         // --- CUSTOM TRACKING SCRIPT ---
-    document.addEventListener("DOMContentLoaded", function() {
-        // Data to send
-        const trackingData = {
-            page: window.location.pathname + window.location.hash, // Tracks page name + section (#about)
-            log: "Page Loaded" // Optional custom log message
-        };
+document.addEventListener("DOMContentLoaded", function() {
+    const trackingData = {
+        page: window.location.pathname + window.location.hash,
+        log: "Page Loaded"
+    };
 
-        // Send to Flask Backend
-        fetch('http://127.0.0.1:5000/track_visit', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(trackingData)
-        })
-        .then(response => response.json())
-        .then(data => console.log("Tracking Active:", data))
-        .catch(error => console.error("Tracking Error:", error));
-    });
+    fetch('https://my-portfolio-hd4y.onrender.com/track_visit', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(trackingData)
+    })
+    .then(response => response.json())
+    .then(data => console.log("Tracking Active:", data))
+    .catch(error => console.error("Tracking Error:", error));
+});
     </script>
 </body>
 </html>
