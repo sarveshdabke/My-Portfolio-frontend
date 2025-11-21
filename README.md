@@ -26,11 +26,7 @@ It features a decoupled architecture where the **Frontend** is hosted on Vercel 
 ---
 
 ## 🏗️ **Project Architecture**
-<p align="center">
-  <img src="https://github.com/sarveshdabke/my-portfolio/raw/main/assets/GITHUB/architecture-diagram.png" width="700">
-</p>
-Frontend (Vercel) → API Requests → Backend (Flask - Render/Railway)
-→ Email Service (SMTP)
+Frontend (Vercel) → API Requests → Backend (Flask - Render)
 → Analytics Logging (SQLite)
 
 ---
