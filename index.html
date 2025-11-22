@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Animated Portfolio Intro</title>
+
+    <!-- SEO Title -->
+    <title>Sarvesh Dabke | Animated Portfolio Intro | Web & App Developer</title>
+
+    <!-- SEO Description -->
+    <meta name="description" content="Welcome to the animated portfolio of Sarvesh Dabke — Web Developer, App Developer, and UI Designer. Skilled in HTML, CSS, JavaScript, Flutter, Flask, and modern UI animations.">
+
+    <!-- SEO Keywords -->
+    <meta name="keywords" content="Sarvesh Dabke, portfolio, web developer, app developer, UI designer, HTML CSS JavaScript, Flutter developer, Flask developer, animated intro, portfolio website">
+
+    <!-- Author -->
+    <meta name="author" content="Sarvesh Dabke">
+
+    <!-- Open Graph (For Social Media Preview) -->
+    <meta property="og:title" content="Sarvesh Dabke | Web & App Developer Portfolio">
+    <meta property="og:description" content="Explore my animated portfolio intro and see my skills in web development, app development, and UI design.">
+    <meta property="og:image" content="assets/portfolio_banner.png">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com">
+
+    <!-- Favicon -->
     <link rel="icon" type="image/png" href="assets/Favicon.png">
+
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
 
+    <!-- Fonts -->
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:wght@700&display=swap');
 
@@ -18,13 +42,12 @@
             background-color: #0B0C1E;
             margin: 0;
             overflow: hidden;
-            /* Fixed: Use dvh for mobile consistency, fallback to vh */
             height: 100vh;
-            height: 100dvh; 
+            height: 100dvh;
         }
 
-        .font-montserrat { 
-            font-family: 'Montserrat', sans-serif; 
+        .font-montserrat {
+            font-family: 'Montserrat', sans-serif;
         }
 
         .grid-background {
@@ -33,40 +56,36 @@
                 linear-gradient(to bottom, rgba(240, 244, 248, 0.08) 1px, transparent 1px),
                 linear-gradient(to right, rgba(240, 244, 248, 0.08) 1px, transparent 1px);
             background-size: 100px 100px;
-            
-            /* Fixed: Ensure container fits mobile screens perfectly */
             width: 100%;
-            height: 100vh; 
-            height: 100dvh; 
+            height: 100vh;
+            height: 100dvh;
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: space-between; /* Keeps title top, image bottom */
+            justify-content: space-between;
             text-align: center;
         }
 
-        .slide-up { 
-            animation: slideUp 1.3s ease-out forwards; 
+        .slide-up {
+            animation: slideUp 1.3s ease-out forwards;
         }
 
-        .cursor { 
-            border-right: 3px solid rgba(255, 255, 255, 0.75); 
-            animation: blink 0.8s infinite; 
+        .cursor {
+            border-right: 3px solid rgba(255, 255, 255, 0.75);
+            animation: blink 0.8s infinite;
         }
 
-        .portrait-img { 
-            opacity: 0; 
+        .portrait-img {
+            opacity: 0;
             height: auto;
             display: block;
-            margin-top: auto; 
-            margin-bottom: 0 !important; 
-
-            /* FIX: Added max-height and width auto to prevent cropping on laptops */
-            max-height: 70vh; 
-            width: auto;      
+            margin-top: auto;
+            margin-bottom: 0 !important;
+            max-height: 70vh;
+            width: auto;
             object-fit: contain;
         }
-        
+
         /* Animations */
         @keyframes slideUp {
             0% { transform: translateY(100px); opacity: 0; }
@@ -82,8 +101,8 @@
             0% { transform: translateX(0); opacity: 1; }
             100% { transform: translateX(calc(50vw - 200px)); opacity: 1; }
         }
-        .slide-right-edge { 
-            animation: slideToEdge 1.3s ease-in-out forwards; 
+        .slide-right-edge {
+            animation: slideToEdge 1.3s ease-in-out forwards;
         }
 
         /* =========================================
@@ -92,15 +111,14 @@
 
         /* 0 - 480 : Extra Small Phones */
         @media (min-width: 0px) and (max-width: 480px) {
-            .title-responsive { font-size: 40px; margin-top: 15vh; } 
-            /* Changed width to max-width to respect height constraint */
-            .portrait-img { max-width: 95%; } 
+            .title-responsive { font-size: 40px; margin-top: 15vh; }
+            .portrait-img { max-width: 95%; }
         }
 
         /* 481 - 600 : Small Phones */
         @media (min-width: 481px) and (max-width: 600px) {
             .title-responsive { font-size: 35px; margin-top: 12vh; }
-            .portrait-img { max-width: 80%; } 
+            .portrait-img { max-width: 80%; }
         }
 
         /* 601 - 768 : Large Phones */
@@ -112,7 +130,7 @@
         /* 769 - 992 : Tablets */
         @media (min-width: 769px) and (max-width: 992px) {
             .title-responsive { font-size: 55px; margin-top: 12vh; }
-            .portrait-img { max-width: 50%; max-height: 60vh; } /* Stricter height for tablets */
+            .portrait-img { max-width: 50%; max-height: 60vh; }
         }
 
         /* 993 - 1200 : Small Laptops */
